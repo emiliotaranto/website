@@ -1,0 +1,42 @@
+:root {
+    --default-color: #0f2027;
+    --accent-color: linear-gradient(90deg, #00f260, #0575e6);
+    --glow-color: rgba(0, 242, 96, 0.8);
+}
+
+.progress {
+    margin-top: 30px;
+    height: 8px;
+    width: 260px;
+    background-color: var(--default-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px var(--glow-color);
+    position: relative;
+}
+
+.progress .inner {
+    height: 100%;
+    background: var(--accent-color);
+    position: absolute;
+    animation: progress 2s infinite;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+}
+
+@keyframes progress {
+    0% {
+        left: -25%;
+        width: 25%;
+    }
+
+    50% {
+        left: 25%;
+        width: 50%;
+    }
+
+    100% {
+        left: 100%;
+        width: 25%;
+    }
+}

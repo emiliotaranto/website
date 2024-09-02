@@ -1,0 +1,75 @@
+/* Social Media Section */
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 255, 96, 0.6), 0 0 20px rgba(84, 0, 224, 0.6);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+/* Base style: Apply a neon overlay on top of the icons */
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 96, 0.3);
+    /* Neon green overlay */
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+/* Icon images */
+.facebook {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/900px-Facebook_logo_%28square%29.png');
+}
+
+.instagram {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png');
+}
+
+.linkedin {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/900px-LinkedIn_logo_initials.png?20140125013055');
+}
+
+.x {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/900px-X_logo.jpg');
+}
+
+.youtube {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png');
+}
+
+/* Hover effect */
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon:hover::before {
+    opacity: 0;
+}
+
+/* Add additional styles to make sure the overlay is above the icon */
+.social-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
